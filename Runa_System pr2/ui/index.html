@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ancient Rune Forging</title>
+  <link rel="stylesheet" href="./style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&family=Cormorant+Garamond:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+</head>
+<body>
+  <!-- Timer HUD -->
+  <div class="container">
+    <div class="header">
+      <div class="timer-section">
+        <div id="timer" class="highlight">00:00</div>
+      </div>
+      <div class="players-section">
+        <div class="players-icon">&#128101;</div>
+        <div id="participants-counter" class="players-count">0</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Magical Notification -->
+  <div id="upgrade-notification" class="hidden stone-panel" style="position: fixed; top: 20%; left: 50%; transform: translateX(-50%); padding: 25px; border-radius: 8px; text-align: center; z-index: 1000; max-width: 420px;">
+    <h3 id="notification-title" style="font-size: 24px; margin-bottom: 15px; color: #c9a227;"></h3>
+    <p id="notification-message" style="font-size: 18px; margin-bottom: 20px;"></p>
+  </div>
+
+  <!-- 1) Rune Selection Window -->
+  <div id="crafting-menu" class="hidden stone-panel stone-border">
+    <h2 class="ancient-title">Ancient Rune Forge</h2>
+    <p class="ancient-subtitle">Choose a rune to enchant with ancient magic</p>
+    
+    <div id="rune-selection" class="rune-grid"></div>
+    
+    <div id="selected-rune" class="selected-rune-box hidden">
+      <p class="selected-label">Selected Rune:</p>
+      <p id="selected-name" class="selected-name"></p>
+      <p class="selected-hint">Press Confirm to begin the ritual</p>
+    </div>
+    
+    <div class="button-row">
+      <button id="confirm-button" class="wizard-btn confirm-btn hidden">
+        <span class="btn-icon">✦</span> Confirm Rune
+      </button>
+      <button id="close-button" class="wizard-btn cancel-btn">
+        <span class="btn-icon">✕</span> Close
+      </button>
+    </div>
+  </div>
+
+  <!-- 2) Galleons Confirmation Window -->
+  <div id="upgrade-phase2" class="hidden stone-panel stone-border">
+    <h2 class="ancient-title">The Tribute</h2>
+    <p class="ancient-subtitle">This enchantment requires a tribute of 200 Galleons</p>
+    
+    <div class="galeoni-display">
+      <div class="coin-icon">🪙</div>
+      <div class="coin-amount">200</div>
+      <div class="coin-label">Galleons</div>
+    </div>
+    
+    <p class="ancient-warning">The galleons will be taken before the result</p>
+    
+    <div class="button-row">
+      <button id="upgrade-button" class="wizard-btn confirm-btn">
+        <span class="btn-icon">✨</span> Begin Ritual
+      </button>
+      <button id="close-phase2-button" class="wizard-btn cancel-btn">
+        <span class="btn-icon">✕</span> Cancel
+      </button>
+    </div>
+  </div>
+
+  <!-- 3) Enchantment Ritual Window -->
+  <div id="upgrade-progress" class="hidden stone-panel stone-border">
+    <h3 class="ancient-title ritual-title">The Ritual</h3>
+    
+    <!-- Magic Circle Animation -->
+    <div class="magic-circle">
+      <div class="circle-ring ring-1"></div>
+      <div class="circle-ring ring-2"></div>
+      <div class="rune-glyph">⚡</div>
+    </div>
+    
+    <!-- Countdown -->
+    <div id="ritual-timer" class="ritual-timer">3</div>
+    
+    <!-- Cycling Messages -->
+    <p id="ritual-message" class="ritual-message">Channeling ancient magic...</p>
+    
+    <!-- Result -->
+    <div id="upgrade-result" class="result-box hidden">
+      <p id="result-title" class="result-title"></p>
+      <p id="result-message" class="result-message"></p>
+    </div>
+    
+    <button id="continue-result-btn" class="wizard-btn confirm-btn hidden" style="margin-top: 20px;">
+      <span class="btn-icon">↺</span> Continue
+    </button>
+    
+    <button id="close-result-btn" class="wizard-btn close-result-btn hidden" style="margin-top: 20px;">
+      <span class="btn-icon">✕</span> Close
+    </button>
+  </div>
+
+  <script src="./script.js"></script>
+</body>
+</html>
