@@ -1,0 +1,33 @@
+Lycan
+Spell 4	Item pozione_antilupo
+
+Trasformazione
+Durante la fase lunare dovranno obbligatoriamente trasformarsi e attaccare chiunque, nel momento in cui utilizzeranno la spell gli verrà settato il ped da lycan	
+
+Corsa	
+Attivando questa spell loro non consumeranno pià stamina per muoversi e la loro velocità di movimento dorvrà incrementarsi del 30%	
+
+Graffio	
+Una spell ad area con un raggio d'azione di 5 metri che infligge 20Hp con un cooldown di 3 secondi, questo sarà il loro unico modo di attaccare in forma lupo	
+
+Morso	Puramente RP, utilizzato per ferire o trasformare una persona, sarà utilizzabile solo in forma lupo e dopo il morso chi lo riceverà andrà in ragdoll per un minuto e al suo schermo verrà applicato un black screen che va e viene come se aprisse e chiudesse gli occhi ripetutamente fino allo scadere	
+
+Pozione Antilupo	 	L'unico item che se bevuto prima innterromperà la trasformazione in caso della fase lunare
+
+
+Vampire
+Spell	
+4 totali 
+item sangue.png
+
+Aura	
+Qual'ora dovranno mordere o nutrirsi, dovranno attivare il loro istinto primordiale, una volta attivato un aura rossa circoderà il vampiro fino al momento della disattivazione	
+
+Morso	
+Puramente RP, utilizzato per ferire o trasformare una persona, sarà utilizzabile solo con l'aura attiva, chi riceverà il morso cadrà in ragdoll per un minuto la sua vita scenderà e verrà settata a 20hp e come effetto visivo a schermo subità lo stesso di quello usato nella quest dello specchio quando si rompe ma senza l'audio. Il vampiro che morderà invece al termine del morso si rifullerà cibo e acqua completamente.	
+
+Nutriti
+Per questa abilità non servirà l'attivazione dell'aura ma sarà l'unico modo che avranno per saziarsi oltre al morso. I vampiri non possono mangiare o bere altro che non sia del sangue umano o animale. Con questa abilità gli verrà consumata dall'inventario un item che si chiamerà "Ampolla di Sangue", che gli refullerà cibo e acqua	
+
+Sacca di sangue ( gia inserita in items.lua di ox_inventory img e data ) sangue.png
+Avrà l'aspetto di una vera e propria pozione in vetro semi trasparente con all'interno del sangue in grado di mettere fine alla loro fame
