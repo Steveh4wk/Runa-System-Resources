@@ -1,0 +1,170 @@
+/* Stefano Luciano Developed: Orologio Stellare CSS */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+    background: transparent;
+}
+
+/* FADE */
+body {
+    opacity: 1;
+    transition: opacity 1.5s ease-in-out;
+}
+
+body.hidden {
+    opacity: 0;
+    pointer-events: none;
+}
+
+/* BACKGROUND FORZATO */
+#stars-container {
+    position: fixed;
+    inset: 0;
+    z-index: 1;
+    pointer-events: none;
+    background: rgba(0,0,0,0.15);
+}
+
+/* STELLE STATICHE */
+.static-star {
+    position: absolute;
+    background: #ffffff;
+    border-radius: 50%;
+    box-shadow: 0 0 10px #c77dff;
+    opacity: 0.8;
+    animation: twinkle 3s infinite;
+}
+
+@keyframes twinkle {
+    0%, 100% { 
+        opacity: 0.3; 
+        transform: scale(0.8);
+    }
+    50% { 
+        opacity: 1; 
+        transform: scale(1.2);
+    }
+}
+
+/* COMETA BRILLANTE */
+.comet {
+    position: absolute;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: radial-gradient(circle, #f3d9ff 0%, #c77dff 40%, transparent 70%);
+    box-shadow:
+        0 0 15px #c77dff,
+        0 0 35px #9d4edd,
+        -25px 25px 40px rgba(199,125,255,0.9);
+
+    will-change: transform, opacity;
+    animation: comet-fall linear forwards;
+}
+
+/* ANIMAZIONE COMETA */
+@keyframes comet-fall {
+    from {
+        transform: translate(120vw, -20vh);
+        opacity: 1;
+    }
+    to {
+        transform: translate(-140vw, 140vh);
+        opacity: 1;
+    }
+}
+
+/* TESTO */
+#text-overlay {
+    position: fixed;
+    inset: 0;
+    z-index: 10;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    text-align: center;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: bold;
+    color: #ffffff;
+    text-shadow:
+        0 0 10px #c77dff,
+        0 0 20px #9d4edd,
+        0 0 30px #e0aaff,
+        0 0 40px #ffffff,
+        2px 2px 8px rgba(0,0,0,0.8);
+    
+    animation: textGlow 2s ease-in-out infinite alternate;
+    letter-spacing: 2px;
+}
+
+#text-overlay p {
+    font-size: 2.8rem;
+    max-width: 80%;
+    line-height: 1.6;
+    text-transform: uppercase;
+}
+
+#text-overlay span {
+    font-size: 1.8rem;
+    opacity: 0.9;
+    color: #e0aaff;
+}
+
+.main-line {
+    display: block;
+    font-size: 3.2rem;
+    margin-bottom: 15px;
+    text-shadow: 0 0 25px #c77dff;
+}
+
+.sub-line {
+    display: block;
+    font-size: 2.2rem;
+    margin-bottom: 10px;
+    color: #9d4edd;
+}
+
+.effect-line {
+    display: block;
+    font-size: 2.0rem;
+    margin-bottom: 8px;
+    color: #e0aaff;
+    font-weight: bold;
+}
+
+/* ANIMAZIONE TESTO LUMINOSO */
+@keyframes textGlow {
+    0% {
+        text-shadow:
+            0 0 10px #c77dff,
+            0 0 20px #9d4edd,
+            0 0 30px #e0aaff,
+            0 0 40px #ffffff,
+            2px 2px 8px rgba(0,0,0,0.8);
+    }
+    50% {
+        text-shadow:
+            0 0 15px #c77dff,
+            0 0 30px #9d4edd,
+            0 0 50px #e0aaff,
+            0 0 60px #ffffff,
+            4px 4px 12px rgba(0,0,0,0.9);
+    }
+    100% {
+        text-shadow:
+            0 0 20px #c77dff,
+            0 0 40px #9d4edd,
+            0 0 70px #e0aaff,
+            0 0 80px #ffffff,
+            6px 6px 16px rgba(0,0,0,1);
+    }
+}
