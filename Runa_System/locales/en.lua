@@ -1,0 +1,26 @@
+Locales['en'] = {
+    ['game_starts'] = '"~p~Rune System~w~" has begun',
+    ['game_already_started'] = 'The game has already started',
+    ['player_joined'] = 'A player has joined the lobby',
+    ['you_joined_game'] = 'You have joined the lobby',
+    ['you_left_game'] = 'You have left the game',
+    ['game_finished'] = 'The game has ended',
+    ['squid_game'] = '~q~Rune System~w~',
+    ['received_money'] = 'You received $%s',
+    ['removed_money'] = 'You paid $%s',
+    ['not_enaugh_money'] = 'You don\'t have enough money to play this game ($%s)',
+    ['player_%s_won_%s'] = '%s won $%s in the game',
+    ['minimum_participatns_requirement_%s'] = 'The game requires at least %s players',
+    ['player_already_joined'] = 'You have already joined the lobby',
+    ['minigame_in_cooldown'] = 'Wait a bit before starting a new game',
+    ['game_waiting'] = '~y~GAME STARTS IN ~w~%s~y~ SECONDS\nReward Pool: ~g~$~w~%s',
+    ['not_enaugh_money_and_item'] = 'You don\'t have enaugh money ($%s) and "Access Card" for playing this game',
+    ['no_required_item'] = 'You don\'t have "Access Card" for playing this game',
+    
+    -- Rock/Dalgona Stone interactions
+    ['rock_interact_prompt'] = '[U] Pietra Magica',
+    ['minigame_success'] = 'Hai trasformato la Pietra in una Runa Magica!',
+    ['minigame_failed'] = 'La Pietra si è rotta!',
+    ['minigame_started'] = 'Inizia il gioco Rune System...',
+    ['rock_too_far'] = 'Teletrasportato alla Pietra Magica',
+}
